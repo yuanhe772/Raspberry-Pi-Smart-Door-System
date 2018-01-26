@@ -5,6 +5,8 @@ Pygame for Pi-TFT, Server Design with Flask, Fingerprint Sensor for Raspberry-pi
 
 
 
-Website and everything one needs to know for this project: https://courses.cit.cornell.edu/ece5990/ECE5725_Fall2017_projects/final_yh772_rw564/
+Website and everything one needs to know for this project: https://courses.cit.cornell.edu/ece5990/ECE5725_Fall2017_projects/final_yh772_rw564/.
 
-Ignore the stupid video in the above website and go to this one https://www.youtube.com/watch?v=KRLi6GthbFA&t=76s for reference
+Ignore the stupid video in the above website and go to this one https://www.youtube.com/watch?v=KRLi6GthbFA&t=76s for reference.
+
+There are path names of "cornellfaces" and "visitorfaces" in the scripts for the purpose of face recognition's training set. If you want to have yourself recognized, please have your own face's pictures for training.
