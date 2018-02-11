@@ -8,4 +8,4 @@ This website contains evrything you need to know for this project: https://cours
 
 
 
-In the scripts of .zip file, there are path names of "cornellfaces" and "visitorfaces" containing face recognition's training set. Please put your own biographic photos in the correct path accordingly, and the scripts in the .zip would have them trained for face-recognition purpose.
+In the scripts of .zip file, there are path names of "cornellfaces" and "visitorfaces" containing face recognition's training set. Please put your own biographic photos in the correct path accordingly, and the scripts in .zip file would have them trained for face-recognition purpose.
