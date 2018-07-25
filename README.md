@@ -6,7 +6,7 @@ Used Python Flask for setting up the server on Pi to support front-end web pages
 Face recognition ran at 15 FPS utilizing multi-core coordination, 3X faster than usual single-core implementation
 Website for the project: https://courses.cit.cornell.edu/ece5990/ECE5725_Fall2017_projects/final_yh772_rw564/;
 
-## Hashtagging key words
+## Key words
 Pygame for Pi-TFT, Server Design with Flask, Fingerprint Sensor for Raspberry-pi, Pi-Cam
 
 
