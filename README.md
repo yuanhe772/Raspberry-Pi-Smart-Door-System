@@ -1,4 +1,4 @@
-# R-Pi-Smart-Door-System-
+# R-Pi-Smart-Door-System
 
 ## A Brief insight
 An entrance-guarding system using Raspberry Pi, permitting access with face, voice and fingerprint recognition, with a local touch screen GUI and a secured-login web interface for remote control over the system 
