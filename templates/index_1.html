@@ -1,0 +1,110 @@
+<!-- index_1.html -->
+
+
+{% extends "index.html" %}
+{% block content %}
+
+
+<style type="text/css" media="screen">
+table {
+    font-family: Palatino, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+<div class="header">
+    <h2 class="title"><font size="6">Visitor Monitor</font></h2>
+    <p class="category"></p>
+
+    <br>
+    <p><button id="open" value=1><font size="5">Open/Close the Door</font></button></p>
+    <p><button id="delete" value=1><font size="5">Delete</font></button></p>
+    <br>
+    
+    {% if a != 0 and b != 0 and c != 0 %}
+    
+    <table>
+    <tr>
+    <th>Face Verification</th>
+    <th>Voice Verification</th>
+    <th>Fingerprint Verification</th>
+    </tr>
+    
+    <tr>
+    {% if a == 1 %}
+    <td><p>Pass</p></td>
+    {% else %}
+    <td><p>Fail</p></td>
+    {% endif %}
+    
+    {% if b == 1 %}
+    <td><p>Pass</p></td>
+    {% else %}
+    <td><p>Fail</p></td>
+    {% endif %}
+    
+    {% if c == 1 %}
+    <td><p>Pass</p></td>
+    {% else %}
+    <td><p>Fail</p></td>
+    {% endif %}
+    
+    </tr> 
+    </table>
+    {% endif %}
+    
+
+    <script type="text/javascript">
+
+    var open_door = function (e) {
+    $.post($SCRIPT_ROOT + '/open', {
+  	type: $(this).attr('id'),
+  	value: $(this).val()
+    });
+    return false;
+    };
+
+    $("#open").bind("click",open_door);
+    
+    var delete_message = function (e) {
+    $.post($SCRIPT_ROOT + '/delete_visitor', {
+  	type: $(this).attr('id'),
+  	value: $(this).val()
+    });
+    return false;
+    };
+
+    $("#delete").bind("click",delete_message);
+
+    </script>
+    
+    <br>
+    <br>
+
+    <div class="row">
+        <img src="{{ url_for('video_feed') }}" width=1000>
+    </div>
+    
+
+</div>
+
+<div class="content">
+    <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+
+    </div>
+</div>
+
+
+{% endblock %}

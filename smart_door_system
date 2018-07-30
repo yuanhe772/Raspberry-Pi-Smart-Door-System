@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo modprobe bcm2835-v4l2
+
+sudo python web.py &
+
+sudo python GUI_2.py
+

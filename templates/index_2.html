@@ -1,0 +1,80 @@
+<!-- index_2.html -->
+
+
+{% extends "index.html" %}
+{% block content %}
+
+<style type="text/css" media="screen">
+table {
+    font-family: Palatino, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+<div class="header">
+    <h2 class="title"><font size="6">Voice Message</font></h2>
+    <p class="category"></p>
+    
+    <br>
+    <br>
+
+    
+    <p><button id="delete1" value=0><font size="5">Delete</font></button></p>
+    <br>
+    
+    <script type="text/javascript">
+    
+    var delete_mess = function (e) {
+    $.post($SCRIPT_ROOT + '/delete_voice', {
+  	type: $(this).attr('id'),
+  	value: $(this).val()
+    });
+    alert("Deleted!")
+    return false;
+    };
+
+    $("#delete1").bind("click",delete_mess);
+
+    </script>
+    
+    
+    <table>
+    <tr>
+    <th>Visitor</th>
+    <th>Voice Message</th>
+    </tr>
+
+    {% for i in range(music_files_number) %}
+        <tr>
+            <td><img src="static/media/image/{{ image_files[i] }}" width="100" height="110"></td>
+    
+            <td><audio controls>
+                    <source src="static/media/audio/{{ music_files[i] }}" type="audio/wav">
+                    Your browser does not support this audio format.
+            </audio></td>
+        </tr>
+    {% endfor %}
+    
+    </table>
+    
+</div>
+
+<div class="content">
+    <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+
+</div>
+
+
+{% endblock %}
