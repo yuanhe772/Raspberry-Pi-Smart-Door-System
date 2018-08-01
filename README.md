@@ -1,6 +1,6 @@
 # R-Pi-Smart-Door-System
 
-## Brief ah
+## Brief
 An entrance-guarding system using Raspberry Pi, permitting door access with face, voice and fingerprint recognition, with a local touch screen GUI and a secured-login web interface for remote control over the system. 
 Used Python Flask for setting up the server on Pi to support front-end web pages and restore visitor messages as key-value pair in local database.
 Face recognition ran at 15 FPS utilizing multi-core coordination, 3X faster than usual single-core implementation.   
